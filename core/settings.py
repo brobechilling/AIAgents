@@ -19,7 +19,7 @@ class Settings:
     POSTGRES_SSLMODE = os.environ.get("POSTGRES_SSLMODE") 
 
     # API Service
-    HOST = "0.0.0.0"
-    PORT = 3000
+    HOST = os.environ.get("API_SERVICE_HOST")
+    PORT = os.environ.get("API_SERVICE_PORT")
 
 settings = Settings()
