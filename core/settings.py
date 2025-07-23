@@ -20,6 +20,6 @@ class Settings:
 
     # API Service
     HOST = os.environ.get("API_SERVICE_HOST")
-    PORT = os.environ.get("API_SERVICE_PORT")
+    PORT = int(os.environ.get("API_SERVICE_PORT"))
 
 settings = Settings()
