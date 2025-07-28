@@ -23,6 +23,8 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.service
+    volumes:
+      - ./vectorstore:/app/vectorstore
     ports:
       - "3000:3000"
     env_file:

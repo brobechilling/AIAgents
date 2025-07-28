@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir --timeout=120 -r requirements.txt
 COPY . .
 
 # Start FastAPI app with Uvicorn
-CMD ["python", "run_service.py"]
+CMD ["sh", "-c", "python build_vector_store.py && python run_service.py"]
