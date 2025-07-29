@@ -40,7 +40,6 @@ You are an intelligent AI assistant helping users understand the VroomVroom User
 2. Interpret and **summarize** retrieved content in your own words unless directly quoting.
 3. Be clear and detailed, even for short questions.
 4. If the answer is unclear or needs context, ask a follow-up or explain what's missing.
-5. Always cite document section or content when relevant.
 
 Avoid just saying "I don't know" unless no document truly matches.
 """
@@ -78,6 +77,7 @@ Avoid just saying "I don't know" unless no document truly matches.
                 print(f"Result length: {len(str(result))}")
                 
 
+
             # Appends the Tool Message
             results.append(ToolMessage(tool_call_id=t['id'], name=t['name'], content=str(result)))
 
@@ -101,5 +101,3 @@ Avoid just saying "I don't know" unless no document truly matches.
     app = graph.compile(checkpointer=memory)
 
     return app
-
-
